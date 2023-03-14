@@ -10,5 +10,12 @@
 		public string Phone { get; set; }
 		public string PhoneNumber { get; set; }
 
+		public UserSettings Settings { get; set; }
+	}
+
+
+	public class UserSettings
+	{
+		public string Test { get; set; }
 	}
 }

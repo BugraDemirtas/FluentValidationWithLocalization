@@ -9,9 +9,11 @@ namespace FluentValidationWithLocalization.Validator
 	{
 		public UserValidator(IStringLocalizer<Lang> localize)
 		{
-			RuleFor(b => b.Name).NotNull().Length(5).WithMessage(x => localize[Messages.ValidationMessages.NameLength]);
+			RuleFor(b => b.Name).NotNull().Length(5,50).WithMessage(x => localize[Messages.ValidationMessages.NameLength]);
 
 			RuleFor(b => b.Age).NotNull().InclusiveBetween(5,60).WithMessage(x => localize[Messages.ValidationMessages.AgeRange]);
+
+			RuleFor(b => b.Settings.Test).NotNull().Length(4).WithMessage(x => localize[Messages.ValidationMessages.NameLength]);
 		}
 	}
 }
