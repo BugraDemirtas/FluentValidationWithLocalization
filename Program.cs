@@ -17,6 +17,8 @@ builder.Services.AddScoped<IValidator<User>, UserValidator>();
 
 
 
+
+
 #region Localization Configure
 
 
